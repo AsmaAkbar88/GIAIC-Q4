@@ -2,7 +2,7 @@ import chainlit as cl
 from simple_agents.main import agentss
 @cl.on_chat_start
 async def chat_start():
-    await cl.Message(content="Welcome ").send()
+    await cl.Message(content="I am your AI Math Assistant. You can ask me any question related to math. I'm here to help you!").send()
 
 
 @cl.on_message
