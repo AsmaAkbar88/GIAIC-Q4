@@ -10,7 +10,6 @@ async def main(message : cl.Message):
     reply = await agentss (message.content)
     await cl.Message (content= reply).send()
     
-    
 # aisy likh lo ya waisy bt 1 hi hy 
 # @cl.on_message
 # async def main(mes : cl.Message):
