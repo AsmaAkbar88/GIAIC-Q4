@@ -18,7 +18,6 @@ model = OpenAIChatCompletionsModel(
     openai_client=external_client
 )
 
-
 config = RunConfig(
     model=model,
     model_provider=external_client,

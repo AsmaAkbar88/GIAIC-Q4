@@ -9,7 +9,6 @@ dist/
 *.egg-info
 wheels/
 
-
 # 🔐 Environment variables
 .env
 
