@@ -6,6 +6,8 @@ from openai import AsyncOpenAI
 from agents import Agent, Runner, OpenAIChatCompletionsModel , RunConfig
 import chainlit as cl
 
+
+
 #load enviroment variables form .env files
 load_dotenv()
 
