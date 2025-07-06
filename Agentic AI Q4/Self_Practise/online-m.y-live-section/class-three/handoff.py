@@ -29,6 +29,7 @@ config = RunConfig(
 
 @function_tool
 async def get_weather(city: str) -> str:
+    """ a function that returns the weather in a given city"""
     print("get weather is callws")
     return f'The Weather in {city} is soo good' ,
 
@@ -36,14 +37,14 @@ async def get_weather(city: str) -> str:
 french_agent = Agent(
     name="french_agent",
     instructions="You are a helpful French agent that translates French.",
-    handoff_description="Handles French translations.",
+    handoff_description="You are a helpfull french agent.",
 )
     
 
 spanish_agent = Agent(
     name="spanish_agent",
     instructions="You are a helpful Spanish agent that translates Spanish.",
-    handoff_description="Handles Spanish translations.",
+    handoff_description="You are a helpfull spanish agent",
 )
 
 triage_agent = Agent(
@@ -55,7 +56,7 @@ triage_agent = Agent(
 )
 
 async def main():
-    result = await Runner.run( triage_agent , 'tell me the weatther of karachi' ,run_config= config)
+    result = await Runner.run( triage_agent , 'tell me the weatther of karachi, and "hello" in french language' ,run_config= config)
     print("Final Response:  "  , result.final_output )
     print("Last Agent:  " , result.last_agent.name )
 
