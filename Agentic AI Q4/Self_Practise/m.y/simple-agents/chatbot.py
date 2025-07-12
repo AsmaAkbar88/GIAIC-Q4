@@ -4,6 +4,8 @@ from simple_agents.main import agentss
 async def chat_start():
     await cl.Message(content="I am your AI Math Assistant. You can ask me any question related to math. I'm here to help you!").send()
 
+# uv run chainlit run chatbot.py -w
+
 
 @cl.on_message
 async def main(message : cl.Message):
