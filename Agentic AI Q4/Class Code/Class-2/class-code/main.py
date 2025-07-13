@@ -5,9 +5,10 @@ from dotenv import load_dotenv
 from agents import Agent, Runner, OpenAIChatCompletionsModel , AsyncOpenAI, RunConfig
 import asyncio
 
-async def main():
-    load_dotenv()
+load_dotenv()
 
+async def main():
+ 
     GEMINI_API_KEY = os.getenv("GEMINI_API_KEY") 
     MODEL_NAME = "gemini-2.0-flash"
 
@@ -20,32 +21,29 @@ async def main():
     )
 
     model = OpenAIChatCompletionsModel(
-        model= MODEL_NAME ,
+        model=MODEL_NAME,
         openai_client=external_client
     )
 
-
     config = RunConfig(
         model=model,
-        model_provider = external_client,
-        tracing_disabled = True
+        model_provider=external_client,
+        tracing_disabled=True
     )
 
-    agent = Agent(
-        name = "assistant",
-        instructions = "you are a helpful assistant",
-        model = model
+    assistant = Agent(
+        name="Assistant",
+        instructions="Your job is to resolve queries",
+        # model=model
     )
 
     result = await Runner.run(
-        agent,
-        "tell me about piaic.",
+        assistant,
+        "tell me something interesting about Pakistan..",
         run_config = config
     )
 
     print(result.final_output)
-
-
 
 if __name__ == "__main__":
     asyncio.run( main())
