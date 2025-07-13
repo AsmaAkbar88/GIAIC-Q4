@@ -2,3 +2,7 @@ Gemini API Key:
 To generate your Gemini API Key go to https://makersuite.google.com/app
 or 
 https://aistudio.google.com/prompts/new_chat
+
+Base URL:
+https://ai.google.dev/gemini-api/docs/openai 
+#https://generativelanguage.googleapis.com/v1beta/openai/
