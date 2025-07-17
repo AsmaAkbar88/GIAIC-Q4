@@ -1,0 +1,22 @@
+**# python generated files
+#https://platform.openai.com/docs/overview  ye openai api key ky liye link hy 
+
+__pycache__/
+*.py[oc]
+
+# 🛠️ Build artifacts
+build/
+dist/
+*.egg-info
+wheels/
+
+# 🔐 Environment variables
+.env
+
+# 🧪 Virtual environments 
+.venv
+
+# Chainlit specific
+.chainlit/
+
+twilio_2FA_recovery_code.txt
