@@ -3,7 +3,6 @@
 import os
 from dotenv import load_dotenv
 from agents import AsyncOpenAI, OpenAIChatCompletionsModel, Agent, Runner 
-from openai.types.responses import ResponseTextDeltaEvent
 import asyncio
 
 async def main():
@@ -32,11 +31,11 @@ async def main():
         model = model
     )
 
-    result = Runner.run_sync(
+    result = await Runner.run(
         starting_agent= teacher,
         input = "tell me the answer of 10 * 10 ."
     )
-    print(result.final)
+    print(result.final_output)
     
 
 if __name__ == "__main__":
