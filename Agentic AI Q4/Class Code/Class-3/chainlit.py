@@ -62,6 +62,6 @@ async def main(message: cl.Message):
 
     print(result.final_output)
 
-if __name__ == "__main__":
-    asyncio.run(start())
+# if __name__ == "__main__":   # chainlit chala rhi ho tu is code ki zrort nhi hy 
+#     asyncio.run(start())
    
