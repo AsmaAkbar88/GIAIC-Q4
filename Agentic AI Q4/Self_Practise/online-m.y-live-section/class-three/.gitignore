@@ -1,4 +1,4 @@
-*# python generated files
+**# python generated files
 
 __pycache__/
 *.py[oc]
@@ -10,8 +10,10 @@ dist/
 wheels/
 
 # 🔐 Environment variables
-# .env
+.env
 
 # 🧪 Virtual environments 
 .venv
 
+# Chainlit specific
+.chainlit/
