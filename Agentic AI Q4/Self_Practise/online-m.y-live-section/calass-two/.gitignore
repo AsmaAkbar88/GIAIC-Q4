@@ -17,3 +17,5 @@ wheels/
 
 # Chainlit specific
 .chainlit/
+
+.
