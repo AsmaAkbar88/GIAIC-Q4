@@ -4,16 +4,8 @@
 # uv add langchain-google-genai
 # pip install browser-use
 # playwright install chromium --with-deps --no-shell
-
-
-
-from langchain_google_genai import ChatGoogleGenerativeAI
-from browser_use import Agent
-import asyncio
-from dotenv import load_dotenv
-import os
-
-load_dotenv()
+# uv pip install --upgrade langchain-google-genai
+# uv pip install --upgrade browser-use
 
 
 from langchain_google_genai import ChatGoogleGenerativeAI
@@ -22,6 +14,8 @@ import asyncio
 from dotenv import load_dotenv
 load_dotenv()
 import os
+
+
 async def main():
     llm = ChatGoogleGenerativeAI(
         model="gemini-2.5-flash",

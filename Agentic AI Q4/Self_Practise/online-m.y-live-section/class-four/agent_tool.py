@@ -27,12 +27,15 @@ config = RunConfig(
     tracing_disabled=True,
 )
 
-@function_tool
-async def get_weather(city:str)->str:
-    print("get weather called 2")
-    return f"The weather in {city} is sunny"
+
+# ======================================function tool 
+# @function_tool
+# async def get_weather(city:str)->str:
+#     print("get weather called 2")
+#     return f"The weather in {city} is sunny"
 
 
+# =======================================agent tool 
 spanish_agent = Agent(
     name="Spanish agent",
     instructions="you are a translator agent.Your job is to translate the value  into Spanish.",
