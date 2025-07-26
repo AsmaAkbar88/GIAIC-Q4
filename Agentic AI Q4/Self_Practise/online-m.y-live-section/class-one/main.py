@@ -4,6 +4,7 @@ from agents import Agent, Runner, OpenAIChatCompletionsModel
 
 load_dotenv()
 
+
 api_key = os.getenv( "OPENAI_API_KEY")
 if not api_key:
     raise RuntimeError("KEY NOT FOUND")
