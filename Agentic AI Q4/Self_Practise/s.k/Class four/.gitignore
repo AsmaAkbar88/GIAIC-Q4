@@ -1,0 +1,20 @@
+**# python generated files
+
+__pycache__/
+*.py[oc]
+.python-version
+
+# 🛠️ Build artifacts
+build/
+dist/
+*.egg-info
+wheels/
+
+# 🔐 Environment variables
+.env
+
+# 🧪 Virtual environments 
+.venv
+
+# Chainlit specific
+.chainlit/
