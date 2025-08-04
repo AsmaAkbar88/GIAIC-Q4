@@ -38,7 +38,7 @@ async def handle_message(message : cl.Message):
     history = cl.user_session.get("history")
     history.append({"role": "user", "content": message.content})
 
-    msg = cl.Message(content="Thinking")
+    msg = cl.Message(content="")
     await msg.send()
 
     response = Runner.run_streamed( 
@@ -55,7 +55,6 @@ async def handle_message(message : cl.Message):
 
     history.append({"role": "assistant", "content": response.final_output })
 
-    
- #output:
-    # await cl.Message(content= response.final_output).send()
 
+
+# streamed agents

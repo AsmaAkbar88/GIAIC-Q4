@@ -38,3 +38,5 @@ async def handle_message(message : cl.Message):
  #output:
     await cl.Message(content= response.final_output).send()
 
+# simple chainlit agent
+# uv run chainlit run main.py

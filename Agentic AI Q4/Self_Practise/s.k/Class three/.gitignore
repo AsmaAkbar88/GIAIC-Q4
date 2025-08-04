@@ -14,6 +14,9 @@ wheels/
 
 # 🧪 Virtual environments 
 .venv
+.files
+.venv
 
 # Chainlit specific
 .chainlit/
+chainlit.md
