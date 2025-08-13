@@ -2,6 +2,12 @@ version = 1
 revision = 1
 requires-python = ">=3.11"
 
+[manifest]
+members = [
+    "class-6",
+    "class-code-dynamic",
+]
+
 [[package]]
 name = "annotated-types"
 version = "0.7.0"
@@ -95,6 +101,21 @@ wheels = [
 name = "class-6"
 version = "0.1.0"
 source = { virtual = "." }
+dependencies = [
+    { name = "dotenv" },
+    { name = "openai-agents" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "dotenv", specifier = ">=0.9.9" },
+    { name = "openai-agents", specifier = ">=0.2.4" },
+]
+
+[[package]]
+name = "class-code-dynamic"
+version = "0.1.0"
+source = { virtual = "class_code_dynamic" }
 dependencies = [
     { name = "dotenv" },
     { name = "openai-agents" },
