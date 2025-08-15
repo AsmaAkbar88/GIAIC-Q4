@@ -65,8 +65,8 @@ async def main():
     try:
         result = await Runner.run(
             starting_agent=customer_support_agent,
-            # input="Give me the answer of 2 + 2:"
-            input="Define newton's third law of motion?"
+            input="Give me the answer of 2 + 2:"
+            # input="Define newton's third law of motion?"
         )
 
         # print(result.final_output)

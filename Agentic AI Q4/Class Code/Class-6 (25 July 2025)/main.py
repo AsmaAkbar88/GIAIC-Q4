@@ -1,15 +1,18 @@
+# https://github.com/syeda-hoorain-ali/giaic-q3/blob/main/class-12/guardrails.py
+
 import asyncio
 import os
-from dotenv import find_dotenv, load_dotenv
+from dotenv import load_dotenv
 from openai import AsyncOpenAI
 from agents import (
-    Agent, Runner, OpenAIChatCompletionsModel,
+    Agent, Runner, OpenAIChatCompletionsModel, set_tracing_disabled , 
     GuardrailFunctionOutput, InputGuardrailTripwireTriggered, OutputGuardrailTripwireTriggered, 
     RunContextWrapper, TResponseInputItem, input_guardrail, output_guardrail
 )
 from pydantic import BaseModel
 
-load_dotenv(find_dotenv())
+load_dotenv()
+set_tracing_disabled(True)
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 MODEL = "gemini-2.0-flash"

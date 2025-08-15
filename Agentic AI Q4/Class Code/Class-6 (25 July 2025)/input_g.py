@@ -1,4 +1,4 @@
-#  ye simple chainlit ka code hy 
+# https://discord.com/channels/1352950461883482172/1376559198623760474/1398374359197941912
 
 from dotenv import load_dotenv 
 from agents import ( Agent, Runner, OpenAIChatCompletionsModel, AsyncOpenAI, set_tracing_disabled 
