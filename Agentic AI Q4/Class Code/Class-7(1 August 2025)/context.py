@@ -1,3 +1,6 @@
+# link 
+# https://discord.com/channels/1352950461883482172/1376559198623760474/1400918678970699776
+
 
 from dotenv import load_dotenv
 from agents import (
