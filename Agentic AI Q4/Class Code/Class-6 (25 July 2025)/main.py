@@ -69,7 +69,7 @@ output_guardrail_agent = Agent(
 @output_guardrail
 async def physics_guardrail(ctx, agent, output):
 #     ctx: RunContextWrapper[None], agent: Agent, output: MainMessageOutput
-    print("Output Guardrail Prompt: ", output)
+    print("\n Output Guardrail Prompt: ", output)
     result = await Runner.run(starting_agent=output_guardrail_agent, input=output.response)
     return GuardrailFunctionOutput(
         output_info=result.final_output,
@@ -107,8 +107,8 @@ async def main():
     except OutputGuardrailTripwireTriggered as e:
         print("\nPhysics/Output Guradrail Tripwire Triggered: ")
         reasoning = e.guardrail_result.output.output_info.reasoning
-        print(reasoning)
-        # print(e.guardrail_result.output) # GuardrailFunctionOutput: the object return from 'physics_guardrail'
+        print(f"reasoning:   " , reasoning)
+        print(f"\nguardrail Result:   " ,e.guardrail_result.output) # GuardrailFunctionOutput: the object return from 'physics_guardrail'
 
 
 

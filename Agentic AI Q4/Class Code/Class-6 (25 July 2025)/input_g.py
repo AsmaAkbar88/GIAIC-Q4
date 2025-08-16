@@ -63,17 +63,17 @@ async def main():
     try:
         result = await Runner.run(
             starting_agent=customer_support_agent,
-            input="what is computer?? " \
+            input="2+2 = " \
             ":"
             # input="Define newton's third law of motion?"
         )
 
         print("final jwb" , result.final_output)
     except InputGuardrailTripwireTriggered as e:
-        print("\nMath/Input Guradrail Tripwire Triggered: ")
+        print("\n Math/Input Guradrail Tripwire Triggered: ")
         reasoning = e.guardrail_result.output.output_info.reasoning
-        print("reasoning  :" ,reasoning)
-        print("Guardrail Result:  " , e.guardrail_result.output) # GuardrailFunctionOutput: the object return from 'math_guardrail'
+        print("\n reasoning  :" ,reasoning)
+        print("\n Guardrail Result:  " , e.guardrail_result.output) # GuardrailFunctionOutput: the object return from 'math_guardrail'
 
 
 if __name__ == "__main__":

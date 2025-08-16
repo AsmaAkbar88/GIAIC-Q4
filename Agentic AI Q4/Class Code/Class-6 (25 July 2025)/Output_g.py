@@ -65,8 +65,8 @@ async def main():
     try:
         result = await Runner.run(
             starting_agent=customer_support_agent,
-            input="Give me the answer of 2 + 2:"
-            # input="Define newton's third law of motion?"
+            # input="\n Give me the answer of 2 + 2:"
+            input="\n Define newton's third law of motion?"
         )
 
         # print(result.final_output)
@@ -74,8 +74,8 @@ async def main():
     except OutputGuardrailTripwireTriggered as e:
         print("\nPhysics/Output Guradrail Tripwire Triggered: \n ")
         reasoning = e.guardrail_result.output.output_info.reasoning
-        print("Reasoing :" , reasoning)
-        print("Guardrail:  " , e.guardrail_result.output) # GuardrailFunctionOutput: the object return from 'physics_guardrail'
+        print("\n Reasoing :" , reasoning)
+        print("\n Guardrail:  " , e.guardrail_result.output) # GuardrailFunctionOutput: the object return from 'physics_guardrail'
 
 
 
