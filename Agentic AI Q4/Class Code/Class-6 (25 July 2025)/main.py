@@ -108,7 +108,7 @@ async def main():
         print("\nPhysics/Output Guradrail Tripwire Triggered: ")
         reasoning = e.guardrail_result.output.output_info.reasoning
         print(reasoning)
-        print(e.guardrail_result.output) # GuardrailFunctionOutput: the object return from 'physics_guardrail'
+        # print(e.guardrail_result.output) # GuardrailFunctionOutput: the object return from 'physics_guardrail'
 
 
 
