@@ -22,7 +22,7 @@ from agents import Agent, Runner , set_tracing_disabled
 from agents.extensions.models.litellm_model import LitellmModel 
 
 model = LitellmModel(model=MODEL_NAME, api_key=API_KEY)
-set_tracing_disabled = True
+set_tracing_disabled (True)
 
 assistant = Agent(
     name="Assistant",
