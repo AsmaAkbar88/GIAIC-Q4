@@ -1,3 +1,7 @@
+# discord link class:
+# https://colab.research.google.com/drive/1dz1lViKhXBJCMyv40zH4pAc90P1LVP-m?usp=sharing 
+
+
 # =====================================================cell1:
 # 🟢 1. Install openai-agents with litellm support
 !pip install openai-agents "openai-agents[litellm]"
