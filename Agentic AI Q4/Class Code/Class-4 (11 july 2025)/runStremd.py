@@ -1,4 +1,5 @@
-#uv run main.py
+# discord class link:
+# GitHub Repository: https://github.com/syeda-hoorain-ali/giaic-q3/tree/main/class-10
 
 import os
 from dotenv import load_dotenv
@@ -34,7 +35,7 @@ async def main():
 
     result = Runner.run_streamed(
         starting_agent= teacher,
-        input = "tell me the answer of 10 * 10 ."
+        input = "tell me the answer of 10 * 10 in details ."
     )
     async for event in result.stream_events():
         if event.type == "raw_response_event" and isinstance (
