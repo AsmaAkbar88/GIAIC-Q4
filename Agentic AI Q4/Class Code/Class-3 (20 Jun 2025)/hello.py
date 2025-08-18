@@ -1,4 +1,4 @@
-#uv run main.py
+#uv run hello.py
 
 import os
 from dotenv import load_dotenv
