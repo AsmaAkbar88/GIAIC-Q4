@@ -2,11 +2,12 @@
 
 import os
 from dotenv import load_dotenv
-from agents import AsyncOpenAI, OpenAIChatCompletionsModel, Agent, Runner 
+from agents import AsyncOpenAI, OpenAIChatCompletionsModel, Agent, Runner , set_tracing_disabled
 import asyncio
 
 async def main():
     load_dotenv()
+    set_tracing_disabled (True)
 
     GEMINI_API_KEY = os.getenv("GEMINI_API_KEY") 
     MODEL_NAME = "gemini-2.0-flash"

@@ -1,5 +1,8 @@
 #uv run main.py
 
+# discord link class:
+# https://discord.com/channels/1352950461883482172/1376559198623760474/1386663301206900890
+
 import os
 from dotenv import load_dotenv
 from agents import AsyncOpenAI, OpenAIChatCompletionsModel, Agent, Runner ,function_tool
