@@ -3,8 +3,6 @@
 # discord link class:
 # https://discord.com/channels/1352950461883482172/1376559198623760474/1385944200759083098
 
-# uv run chainlit run chainlit.py -w
-
 # ======================================================
 # 📌 Chatbot using Chainlit + OpenAI Agents SDK + Gemini
 # ======================================================
@@ -92,3 +90,6 @@ async def main(message: cl.Message):
 # if __name__ == "__main__":   # chainlit chala rhi ho tu is code ki zrort nhi hy 
 #     asyncio.run(start())
    
+
+#    ok
+#  uv run chainlit run chainlit.py -w
