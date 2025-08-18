@@ -12,7 +12,7 @@ from agents import AsyncOpenAI, OpenAIChatCompletionsModel, Agent, Runner
 import chainlit as cl
 import os
 
-# 🔑 Load Environment Variables
+# 🔑🔹============ Load Environment Variables 🔹============
 load_dotenv()
 
 
@@ -21,26 +21,26 @@ load_dotenv()
 # ======================================================
 @cl.on_chat_start
 async def start():   
-    # API Key & Model
+    #🔹============ API Key & Model 🔹============
     GEMINI_API_KEY = os.getenv("GEMINI_API_KEY") 
     MODEL_NAME = "gemini-2.0-flash"
 
     if not GEMINI_API_KEY:
         raise ValueError("❌ GEMINI_API_KEY NOT FOUND")
 
-    # 🔗 Connect Gemini with OpenAI wrapper
+    # 🔗🔹============ Connect Gemini with OpenAI wrapper 🔹============
     external_client = AsyncOpenAI(
         api_key=GEMINI_API_KEY,
         base_url="https://generativelanguage.googleapis.com/v1beta/openai/"
     )
 
-    # 🎯 Model Selection
+    # 🎯🔹============ Model Selection  🔹============
     model = OpenAIChatCompletionsModel(
         model=MODEL_NAME,
         openai_client=external_client
     )
 
-    # 📝 User Session (store history & agent)
+    # 📝🔹============ User Session (store history & agent) 🔹============
     cl.user_session.set("chat_history", [])
 
     teacher = Agent(
@@ -50,7 +50,7 @@ async def start():
     )
     cl.user_session.set("agent", teacher)
     
-    # 👋 Welcome Message
+    # 👋🔹============ Welcome Message 🔹============
     await cl.Message(content="👋 Welcome to Friday Class...! How can I help you today?").send()
 
 
@@ -60,31 +60,31 @@ async def start():
 # ======================================================
 @cl.on_message
 async def main(message: cl.Message):
-    # Thinking message
+    # Thinking message 🔹============
     msg = cl.Message(content="🤔 Thinking...")
     await msg.send()
 
-    # Get agent & history from session
+    # Get agent & history from session 🔹============
     teacher = cl.user_session.get("agent") 
     history = cl.user_session.get("chat_history")
 
-    # Append new user message
+    # Append new user message 🔹============
     history.append({"role": "user", "content": message.content})
 
-    # Run the Agent
+    # Run the Agent 🔹============
     result = await Runner.run(
         starting_agent=teacher,
         input=history
     )
 
-    # Show Final Answer
+    # Show Final Answer 🔹============
     msg.content = result.final_output
     await msg.update()
 
-    # Save Updated History
+    # Save Updated History 🔹============
     cl.user_session.set("chat_history", result.to_input_list())
 
-    # Debug Print
+    # Debug Print 🔹============
     print(result.final_output)
 
 # if __name__ == "__main__":   # chainlit chala rhi ho tu is code ki zrort nhi hy 
