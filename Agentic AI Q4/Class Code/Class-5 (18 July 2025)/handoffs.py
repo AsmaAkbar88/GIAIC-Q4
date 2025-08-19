@@ -1,19 +1,33 @@
+# discord link class 
+# GitHub Code: https://github.com/syeda-hoorain-ali/giaic-q3/tree/main/class-11
+ 
+
+
+# 📌🔹============  Import Libraries ============
 import asyncio
 import os
-from dotenv import find_dotenv, load_dotenv
+from dotenv import load_dotenv
 from openai import AsyncOpenAI
-from agents import Agent, Runner, OpenAIChatCompletionsModel
+from agents import Agent, Runner, OpenAIChatCompletionsModel , set_tracing_disabled
 
-load_dotenv(find_dotenv())
+# 🔹============ Load Environment Variables ===========
+load_dotenv()
+set_tracing_disabled(True)
 
+
+
+# ✅ 🔹============ API Key & Model Setup ============
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 MODEL = "gemini-2.0-flash"
 BASE_URL = "https://generativelanguage.googleapis.com/v1beta/openai/"
 
 
+ # ✅🔹============  External Client Setup &  Model Setup ============
 client = AsyncOpenAI(api_key=GEMINI_API_KEY, base_url=BASE_URL)
 model = OpenAIChatCompletionsModel(model=MODEL, openai_client=client)
 
+
+# 📌🔹============  Main Function ============
 async def main():
 
     urdu_translator = Agent(
@@ -45,11 +59,13 @@ async def main():
         handoffs=[urdu_translator, arabic_translator, french_translator]
     )
 
-    
+      # ✅🔹============ Run Agent ============
     result = await Runner.run(
         starting_agent=main_agent,
         input="Translate how are you in arabic"
     )
+    
+    # ✅🔹============ Print Final Output ============
     print(result.final_output)
 
 
@@ -57,3 +73,6 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
+    # ok
+    # uv run handoffs.py 

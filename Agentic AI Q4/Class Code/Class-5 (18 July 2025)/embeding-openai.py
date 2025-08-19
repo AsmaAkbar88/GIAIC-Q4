@@ -1,3 +1,6 @@
+# discord link class:
+# Google Colab: https://colab.research.google.com/drive/1BE7dpOcGdLVqW5QIJaSrUrZfxSygMYFk
+
 # Embedding - File Search Tool
 # How to create a Vector Database
 # Go to Open AI Platform -> Dashboard -> storage -> vector stores ->

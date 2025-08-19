@@ -1,6 +1,9 @@
 # uv pip install google-generativeai
 # uv pip install pymupdf
 
+# discord link class:
+# https://discord.com/channels/1352950461883482172/1376559198623760474/1395830178734936177
+
 # filename: pdf_agent.py
 
 import os
@@ -67,3 +70,7 @@ if __name__ == "__main__":
 #     print(text[:500])  # sirf first 500 characters print hon
 # else:
 #     print("❌ File nahi mili. Name ya path galat hai.")
+
+
+# ok 
+# uv run gemini_pdf.py
