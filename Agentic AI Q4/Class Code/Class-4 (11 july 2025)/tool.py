@@ -1,5 +1,9 @@
 # discord link class:
-# Colab Notebook: https://colab.research.google.com/drive/1h2tB8ZxLr6uUyph2CnFDSJ9KFqkju717?usp=sharing
+# https://discord.com/channels/1352950461883482172/1376559198623760474/1393294440793378937
+
+
+# Colab Notebook: 
+# https://colab.research.google.com/drive/1h2tB8ZxLr6uUyph2CnFDSJ9KFqkju717?usp=sharing
 
 # cell 01
 # !pip install -qU openai-agents

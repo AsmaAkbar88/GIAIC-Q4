@@ -37,16 +37,15 @@ async def main():
     )
 
     # 👨‍🏫 Agent Setup
-    teacher = Agent(
-        name = "Math Teacher",
-        instructions = "you are a Math Teacher",
-        model = model
-    )
+    agent = Agent(
+    name="Assistant",
+    instructions="You are a helpful assistant",
+    model=model)
 
     # ▶️ Run Streamed Agent
     result = Runner.run_streamed(
-        starting_agent= teacher,
-        input = "tell me the answer of 10 * 10 in details ."
+        starting_agent= agent,
+        input = "tell me something interesting about pakistan in 100 words"
     )
 
     # 📡 Stream Events
