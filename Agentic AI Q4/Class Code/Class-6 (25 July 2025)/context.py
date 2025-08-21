@@ -1,3 +1,7 @@
+# discord class link 
+# https://discord.com/channels/1352950461883482172/1376559198623760474/1398374359197941912
+
+# class code link
 # https://github.com/syeda-hoorain-ali/giaic-q3/tree/main/class-12
 
 import asyncio
@@ -61,3 +65,6 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
+    # ok
+    # uv run context.py

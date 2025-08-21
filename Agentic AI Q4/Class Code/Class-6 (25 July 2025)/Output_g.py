@@ -81,3 +81,9 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
+    # ok
+    # Output Guardrail Prompt:
+#  response='2 + 2 = 4'
+
+# ================================
