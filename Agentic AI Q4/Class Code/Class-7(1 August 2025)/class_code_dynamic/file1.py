@@ -1,3 +1,6 @@
+# github code link
+# https://github.com/panaversity/learn-agentic-ai/blob/main/01_ai_agents_first/09_dynamic_instructions/hello_agent/main.py
+
 # 🎭 Dynamic Instructions: Make Your Agent Adapt
 # Simple examples to learn dynamic instructions
 

@@ -70,7 +70,7 @@ async def main() -> None:
     #  --------------------Run the agent --------------------
     result = await Runner.run(
         starting_agent=agent,
-        input="hello?",
+        input="hello?? what is user name and location??",
         context=user_info,
     )
 
@@ -81,3 +81,6 @@ async def main() -> None:
 
 if __name__ == "__main__":
     asyncio.run(main())
+
+
+# ok

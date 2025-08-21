@@ -1,7 +1,3 @@
-# https://openai.github.io/openai-agents-python/agents/#dynamic-instructions
-# https://github.com/panaversity/learn-agentic-ai/tree/main/01_ai_agents_first/09_dynamic_instructions
-
-
 # ========== Imports ==========
 
 from dotenv import load_dotenv
@@ -89,3 +85,6 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
+
+# ok
