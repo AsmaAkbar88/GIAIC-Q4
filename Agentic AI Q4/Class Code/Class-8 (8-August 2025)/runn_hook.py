@@ -1,3 +1,9 @@
+# discord class link
+# https://discord.com/channels/1352950461883482172/1376559198623760474/1403486953101594624
+
+
+# github link
+# https://github.com/panaversity/learn-agentic-ai/tree/main/01_ai_agents_first/20_run_lifecycle
 
 # 🔹============== Required Imports ==============
 import os
@@ -135,3 +141,5 @@ async def main():
 # 🔹============== Script Entry Point ==============
 if __name__ == "__main__":
     asyncio.run(main())
+
+    # Ok
