@@ -1,0 +1,12 @@
+[project]
+name = "all-topics-cover"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "chainlit>=2.7.2",
+    "dotenv>=0.9.9",
+    "openai-agents>=0.2.9",
+    "streamlit>=1.49.0",
+]
