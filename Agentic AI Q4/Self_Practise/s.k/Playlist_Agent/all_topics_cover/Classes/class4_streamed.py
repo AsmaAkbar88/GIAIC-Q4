@@ -81,3 +81,4 @@ async def handle_message(message: cl.Message):
 
 
 # ok
+#  uv run chainlit run class4_streamed.py -w
