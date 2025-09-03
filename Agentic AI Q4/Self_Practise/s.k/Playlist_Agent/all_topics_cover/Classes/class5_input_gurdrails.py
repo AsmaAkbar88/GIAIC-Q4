@@ -1,5 +1,8 @@
 # 🔹 ============== Required Imports ============== 
-from agents import OpenAIChatCompletionsModel, AsyncOpenAI, RunConfig, Runner, Agent ,InputGuardrail, GuardrailFunctionOutput,  InputGuardrailTripwireTriggered
+from agents import( OpenAIChatCompletionsModel, 
+                   AsyncOpenAI, RunConfig, Runner, Agent ,
+                   input_guardrail, GuardrailFunctionOutput,
+                    InputGuardrailTripwireTriggered)
 import os
 from dotenv import load_dotenv
 import chainlit as cl
@@ -42,14 +45,13 @@ class Output_python(BaseModel):
 # 🔹 ========== Guardrail Agent ==========
 input_gurdrails_agent = Agent(
     name = "Input Gurdrails Checker",
-    instructions = "Check if the user's question is related to Python programming. Only return true if it is about Python.",
+    instructions = "Check if the user's question is related to Python programming. if it is, return true,if it is not,return false.",
     model= model,
     output_type= Output_python
 )
-@InputGuardrail
+@input_guardrail
 async def input_gurdrail_fun(ctx , agent , input):
     result = await Runner.run(input_gurdrails_agent, input)
-    print("\n User Prompt:  " , input)
 
     return GuardrailFunctionOutput(
         output_info= result.final_output,
@@ -73,6 +75,18 @@ async def handle_start_chat():
 
 
 # 🔹 ============== On Message Event============== 
+
+# @cl.on_message
+# async def main(mess : cl.Message):
+#    result = await Runner.run(
+#       agent_one,
+#       input = mess.content
+#    )
+#    await cl.Message(content= result.final_output).send()
+#   ye sirf python ka reply dy rha hy koi error through nhi kr rha 
+
+# ==========================================================
+
 @cl.on_message
 async def main(message: cl.Message):
     try:
@@ -83,7 +97,7 @@ async def main(message: cl.Message):
         await cl.Message(content=result.final_output).send()
 
     except InputGuardrailTripwireTriggered:
-        await cl.Message(content="⚠️ Sorry, I can only help with Python programming questions.").send()
+        await cl.Message(content="⚠️ Sorry, Please try python related question.").send()
 
 
 # ok
