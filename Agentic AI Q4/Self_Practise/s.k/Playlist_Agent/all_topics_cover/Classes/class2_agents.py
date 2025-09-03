@@ -51,3 +51,7 @@ result = Runner.run_sync(
 
 # 🔹  ============ Print Final Output ============ 
 print(result.final_output)
+
+
+# OK
+# uv run class2_agents.py
