@@ -101,3 +101,4 @@ async def main(message: cl.Message):
 
 
 # ok
+# uv run chainlit run class5_input_gurdrails.py -w
