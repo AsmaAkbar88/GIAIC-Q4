@@ -137,3 +137,4 @@ async def main(message: cl.Message):
 
 
 # ok
+# uv run chainlit run class6_output_gurdrails__input_gurdrails.py -w
