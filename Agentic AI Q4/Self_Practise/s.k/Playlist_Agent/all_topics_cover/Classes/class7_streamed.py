@@ -62,3 +62,6 @@ async def main():
 # 🔹  ============ Run Main ============
 if __name__ == "__main__":
     asyncio.run(main())
+
+    # ok
+    # uv run class7_streamed.py
