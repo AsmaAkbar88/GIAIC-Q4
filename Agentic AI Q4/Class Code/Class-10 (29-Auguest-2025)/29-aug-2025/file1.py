@@ -1,5 +1,5 @@
 # "stop_on_first_tool"
-# class_link_code
+# discord_class_link
 # https://discord.com/channels/1352950461883482172/1376559198623760474/1411105767016108072
 
 # ------------------------------1. Required Imports & Setup------------------------------
